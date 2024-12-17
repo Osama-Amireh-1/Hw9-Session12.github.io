@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        function AddToArray() {
+            arr.push(document.getElementById('num').value)
+        }
+        function Display() {
+            var txt = ""
+            for (var i = 0; i < arr.length; i++) {
+                txt += `Element ${i + 1}: ${arr[i]} <br>`
+            }
+            document.getElementById('p1').innerHTML = txt;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="num"> <button onclick="AddToArray()">Add</button>
+    <button onclick="Display()">Display</button>
+    <p id="p1"> </p>
+</body>
+
+</html>
